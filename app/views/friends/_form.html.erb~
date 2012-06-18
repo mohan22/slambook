@@ -25,7 +25,7 @@
   </div>
   <div class="field">
     <%= f.label :DOB %><br />
-    <%= f.date_select :DOB, :start_year=>1980 %>
+    <%= f.date_select :DOB %>
   </div>
   <div class="field">
     <%= f.label :AboutME %><br />

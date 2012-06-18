@@ -1,6 +1,23 @@
 Slam::Application.routes.draw do
-  resources :friends
-root :to => "friends#index"
+  
+
+  #get "users/new"
+   #get "sessions/new"
+
+  
+  get "log_in" => "sessions#new", :as => "log_in" 
+
+  get "log_out" => "sessions#destroy", :as => "log_out"
+
+  get "sign_up" => "users#new", :as => "sign_up"
+ 
+  root :to => "sessions#new"
+resources :sessions
+  resources :users
+  
+  
+
+resources :friends
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
