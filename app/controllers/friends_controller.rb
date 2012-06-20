@@ -4,12 +4,17 @@ class FriendsController < ApplicationController
   def index
    
 	@friends = Friend.all
+if current_user
+@friends = Friend.all
+render "index"
+ else
+redirect_to log_in_path, :notice=>"You must login first..... :)"
+ end
 
-
-    respond_to do |format|
-      format.html # index.html.erb
-      format.json { render json: @friends }
-    end
+    #respond_to do |format|
+     # format.html # index.html.erb
+      #format.json { render json: @friends }
+    #end
   end
 
   # GET /friends/1
@@ -17,10 +22,17 @@ class FriendsController < ApplicationController
   def show
     @friend = Friend.find(params[:id])
 
-respond_to do |format|
-      format.html # show.html.erb
-      format.json { render json: @friend }
-    end
+if current_user
+@friend = Friend.find(params[:id])
+render "show"
+ else
+redirect_to log_in_path, :notice=>"You must login first..... :)"
+ end
+
+#respond_to do |format|
+ #     format.html # show.html.erb
+  #    format.json { render json: @friend }
+   # end
   end
 
   # GET /friends/new
@@ -28,15 +40,32 @@ respond_to do |format|
   def new
     @friend = Friend.new
 
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @friend }
-    end
+if current_user
+@friend = Friend.new
+render "new"
+ else
+redirect_to log_in_path, :notice=>"You must login first..... :)"
+ end
+
+
+
+    #respond_to do |format|
+     # format.html # new.html.erb
+      #format.json { render json: @friend }
+    #end
   end
 
   # GET /friends/1/edit
   def edit
     @friend = Friend.find(params[:id])
+
+if current_user
+@friend = Friend.find(params[:id])
+render "edit"
+ else
+redirect_to log_in_path, :notice=>"You must login first..... :)"
+ end
+
   end
 
   # POST /friends
