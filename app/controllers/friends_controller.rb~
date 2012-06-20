@@ -10,6 +10,7 @@ class FriendsController < ApplicationController
 else
    redirect_to log_in_path, :notice => "you must login first...."
 end
+    
   end
 
   # GET /friends/1
