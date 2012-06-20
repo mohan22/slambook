@@ -4,20 +4,21 @@ class FriendsController < ApplicationController
   def index
    
 	@friends = Friend.all
- if current_user
-    @friends=Friends.all
-   render "index"
-else
-   redirect_to log_in_path, :notice => "you must login first...."
-end
+
+
+    respond_to do |format|
+      format.html # index.html.erb
+      format.json { render json: @friends }
+    end
   end
 
   # GET /friends/1
   # GET /friends/1.json
   def show
-@friend = Friend.find(params[:id])
+    @friend = Friend.find(params[:id])
+
 respond_to do |format|
-format.html # show.html.erb
+      format.html # show.html.erb
       format.json { render json: @friend }
     end
   end
