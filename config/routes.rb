@@ -2,6 +2,10 @@ Slam::Application.routes.draw do
   
 
   
+  resources :articles
+
+  resources :products
+
    get "sessions/new"
 
   get "users/new"
@@ -11,7 +15,7 @@ Slam::Application.routes.draw do
 
   get "sign_up" => "users#new", :as => "sign_up"
  
-  root :to => "sessions#new"
+  #root :to => "sessions#new"
   resources :sessions
   resources :users
   resources :friends
@@ -64,7 +68,7 @@ Slam::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => 'welcome#index'
+  root :to => 'articles#index'
 
   # See how all your routes lay out with "rake routes"
 
