@@ -1,7 +1,8 @@
-<font color="green">
+<font color="white">
 <h1>Listing friends</h1>
 <h1 align="right">welcome to my slambook......</h1>
-<table border="1">
+<table border="5" width="100%" border color="red">
+  <col width="30" />
   <tr>
     <th>Name  </th>
     <th>Cell  </th>
@@ -15,7 +16,7 @@
 
 <% @friends.each do |friend| %>
   <tr>
-    <td><%= friend.name %></td>
+    <td><%= friend.name %> </td>
     <td><%= friend.cell %></td>
     <td><%= friend.email %></td>
     <td><%= friend.DOB %></td>
@@ -26,9 +27,9 @@
   </tr>
 <% end %>
 </table>
-
-<br />
 </font>
+<br />
+
 <div id="fb-root"></div>
 <script>(function(d, s, id) {
   var js, fjs = d.getElementsByTagName(s)[0];
@@ -37,4 +38,5 @@
   js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&appId=186165954844565";
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
+<div class="fb-like" data-href="http://slam-book.heroku.com/" data-send="true" data-width="450" data-show-faces="true"></div>
 <%= link_to 'New Friend', new_friend_path %>

@@ -3,11 +3,19 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body
 {
-background-image:url('13.jpg');
-height:600px;
-width:600px;
+background-color:black;
+}
+
+.field
+{
+font-size:25px;
+}
+
+.banner
+{
+text-align:center;
 }
 p
 {
-text-indent:50px;
+color:white;
 }

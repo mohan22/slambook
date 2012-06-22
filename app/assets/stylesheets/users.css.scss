@@ -3,16 +3,13 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body
 {
+background-color:black;
 
-text-align:center;
-background-image:url('3.jpg');
-height:800px;
-width:1000px;
 }
 p
 {
-color:#6600CC;
-font-size:20px;
+color:white;
+font-size:30px;
 text-align:center;
 }
 h1
@@ -21,5 +18,5 @@ color:#660033;
 }
 #user_nav
 {
-font-size:15px;
+font-size:30px;
 }
