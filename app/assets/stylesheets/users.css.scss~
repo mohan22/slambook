@@ -3,11 +3,20 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body
 {
+
+text-align:center;
 background-image:url('3.jpg');
 height:800px;
 width:1000px;
 }
 p
 {
-text-indent:150px;
+color:#6600CC;
+font-size:20px;
+text-align:center;
 }
+h1
+{
+color:#660033;
+}
+
