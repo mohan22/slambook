@@ -1,8 +1,5 @@
 <font color="white">
 <h1>Listing friends</h1>
-<P>
-<div id="notice"><%= flash[:notice] %></div>
-</p>
 <h1 align="right">welcome to my slambook......</h1>
 <table border="1" width="100%" bordercolor="red">
   <col width="30" />
