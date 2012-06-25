@@ -5,9 +5,10 @@ class SessionsController < ApplicationController
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
-      redirect_to friends_path, :notice => "Logged in!"
+      flash[:notice] = "Logged in!"
+      redirect_to friends_path,
     else
-      flash.now.alert = "Invalid email or password"
+      flash[:notice] = "Invalid email or password"
       render "new"
     end
   end

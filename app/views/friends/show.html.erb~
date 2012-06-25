@@ -1,4 +1,6 @@
-
+<P>
+<div id="notice"><%= notice %></div>
+</p>
 <p id="center">
   <b>Name:</b>
   <%= @friend.name %>

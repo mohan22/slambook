@@ -1,0 +1,2 @@
+<p id="alert"><%= flash[:notice] %></p>
+

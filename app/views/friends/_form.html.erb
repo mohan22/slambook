@@ -25,13 +25,13 @@
   </div>
   <div class="field">
     <%= f.label :DOB %><br />
-    <%= f.date_select :DOB, :start_year=>1980 %>
+    <%= f.date_select :DOB, :start_year=>1980, :end_year=>1995 %>
   </div>
   <div class="field">
     <%= f.label :AboutME %><br />
     <%= f.text_field :AboutME %>
   </div>
-  <div class="actions">
+  <div id="actions">
     <%= f.submit :Add_Me %>
   </div>
 <% end %>

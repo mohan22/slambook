@@ -1,10 +1,11 @@
 <h1>Log in</h1>
-<%= stylesheet_link_tag "style" %>
+
 <%= form_tag sessions_path do %>
- <p>
+ <p id="login">
   <%= label_tag :user_email %>
-  <%= text_field_tag :email, params[:email] %></p>
- <p> 
+  <%= text_field_tag :email, params[:email] %>
+</p>
+ <p id="login"> 
     <%= label_tag :password %>
     <%= password_field_tag :password %>
   </p>

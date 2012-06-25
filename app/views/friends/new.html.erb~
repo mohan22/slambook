@@ -3,9 +3,7 @@
       <title>My Great Web page</title>
     </head>
     <body>
-       <iframe src="https://www.facebook.com/plugins/like.php?href=YOUR_URL"
-        scrolling="no" frameborder="0"
-        style="border:none; width:450px; height:80px"></iframe>
+      
     </body>
  </html>
 <!-- Place this tag where you want the +1 button to render -->
@@ -25,6 +23,6 @@
 
 <font color="green">
 <%= render 'form' %>
-
-<%= link_to 'Back', friends_path %>
+<p id="notice">
+<%= link_to 'Back', friends_path %></p>
 </font>

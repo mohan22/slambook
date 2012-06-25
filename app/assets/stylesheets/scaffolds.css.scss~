@@ -2,13 +2,14 @@ body {
   background-color: #fff;
   color: #333;
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
+  font-size: 20px;
+  line-height: 25px; }
 
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px; }
+  font-size: 17px;
+  line-height: 18px;
+  text-align:left }
 
 pre {
   background-color: #eee;
@@ -16,7 +17,7 @@ pre {
   font-size: 11px; }
 
 a {
-  color: #000;
+  color: #666;
   &:visited {
     color: #666; }
   &:hover {
@@ -25,10 +26,12 @@ a {
 
 div {
   &.field, &.actions {
-    margin-bottom: 10px; } }
-
-#notice {
-  color: green; }
+    margin-bottom: 10px; 
+    } }
+#actions
+{
+color:green;
+}
 
 .field_with_errors {
   padding: 2px;

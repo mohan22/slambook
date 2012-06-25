@@ -1,19 +1,14 @@
 class SessionsController < ApplicationController
   def new
   end
-  def index
- if @user=user.all
-else
-redirect_to log_in_path, :notice => "you must log in first"
-end
-end
   def create
     user = User.authenticate(params[:email], params[:password])
     if user
       session[:user_id] = user.id
-      redirect_to friends_path, :notice => "Logged in!"
+      flash[:notice] = "Logged in!"
+      redirect_to friends_path,
     else
-      flash.now.alert = "Invalid email or password"
+      flash[:alert] = "Invalid email or password"
       render "new"
     end
   end

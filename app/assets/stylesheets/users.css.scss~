@@ -8,9 +8,9 @@ background-color:black;
 }
 p
 {
-color:#6600CC;
+color:white;
 font-size:30px;
-text-align:center;
+text-align:left;
 }
 h1
 {

@@ -3,6 +3,25 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 body
 {
-background-color:#A0522D;
+background-color:black;
 }
-
+p
+{
+font-size:30px;
+}
+#alert
+{
+font-size:25px;
+color:red;
+text-align:center;
+}
+#login
+{
+color:white;
+font-size:30px;
+text-align:center;
+}
+.button
+{
+text-align:center;
+}

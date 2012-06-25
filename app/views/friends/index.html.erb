@@ -1,7 +1,7 @@
 <font color="white">
 <h1>Listing friends</h1>
 <h1 align="right">welcome to my slambook......</h1>
-<table border="5" width="100%" bordercolor="red">
+<table border="1" width="100%" bordercolor="red">
   <col width="30" />
   <tr>
     <th>Name  </th>
@@ -21,6 +21,7 @@
     <td><%= friend.email %></td>
     <td><%= friend.DOB %></td>
     <td><%= friend.AboutME %></td>
+
     <td><%= link_to 'Show', friend %></td>
     <td><%= link_to 'Edit', edit_friend_path(friend) %></td>
     <td><%= link_to 'Destroy', friend, confirm: 'Are you sure?', method: :delete %></td>
@@ -39,4 +40,5 @@
   fjs.parentNode.insertBefore(js, fjs);
 }(document, 'script', 'facebook-jssdk'));</script>
 <div class="fb-like" data-href="http://slam-book.heroku.com/" data-send="true" data-width="450" data-show-faces="true"></div>
-<%= link_to 'New Friend', new_friend_path %>
+<p id="notice">
+<%= link_to 'New Friend', new_friend_path %></p>
